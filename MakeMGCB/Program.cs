@@ -10,7 +10,7 @@ namespace MakeMGCB
 {
     class Program
     {
-        static bool vcompress = true, vcompressTextures = true, vgenerateMipmaps = true, vtangent = true;
+        static bool vcompress = false, vcompressTextures = false, vgenerateMipmaps = false, vtangent = false;
 
         const int ALL = 0, FBX = 1, FX = 2;
 
@@ -18,6 +18,14 @@ namespace MakeMGCB
         {
             Console.WriteLine("make .mgcb (c) mjt, 2019");
             Console.WriteLine("Creates Content.mgcb, Content_fbx.mgcb and Content_fx.mgcb files.");
+            Console.WriteLine("Parameters:\n -compress\n -compresstex  compress textures\n -mipmap  generate mipmaps\n -tangent  generate tangents\n");
+            foreach(string s in args)
+            {
+                if (s.Contains("-compresstex")) vcompressTextures = true;
+                else if (s.Contains("-compress")) vcompress = true;
+                else if (s.Contains("-compresstex")) vgenerateMipmaps = true;
+                else if (s.Contains("-compresstex")) vtangent = true;
+            }
 
             string compress = "False";
             string compressTextures = "Color";

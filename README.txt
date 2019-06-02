@@ -4,6 +4,15 @@ Released under MIT-license.
 
 Program creates .mgcb files.
 
+Command line parameters:
+	-compress
+	-compresstex  compress textures
+	-mipmap  generate mipmaps
+	-tangent  generate tangents
+
+Usage:  MakeMGCB.exe -tangent
+creates .mgcb files with tangent frames.
+
 Exported files:
 Content.mgcb contains all effects, image, sound and fbx files.
 Content_fx.mgcb contains only effects.
