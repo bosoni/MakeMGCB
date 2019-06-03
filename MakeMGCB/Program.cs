@@ -91,7 +91,7 @@ namespace MakeMGCB
                         }
 
 
-                        if (lfile.EndsWith(".png") || lfile.EndsWith(".jpg"))
+                        if (lfile.EndsWith(".png") || lfile.EndsWith(".jpg") || lfile.EndsWith(".dds"))
                         {
                             str += @"
 #begin " + file + @"
