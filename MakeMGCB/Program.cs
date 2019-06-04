@@ -23,8 +23,8 @@ namespace MakeMGCB
             {
                 if (s.Contains("-compresstex")) vcompressTextures = true;
                 else if (s.Contains("-compress")) vcompress = true;
-                else if (s.Contains("-compresstex")) vgenerateMipmaps = true;
-                else if (s.Contains("-compresstex")) vtangent = true;
+                else if (s.Contains("-mipmap")) vgenerateMipmaps = true;
+                else if (s.Contains("-tangent")) vtangent = true;
             }
 
             string compress = "False";
