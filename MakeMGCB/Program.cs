@@ -38,6 +38,8 @@ namespace MakeMGCB
             string generateMipmaps = vgenerateMipmaps ? "True" : "False";
             string tangent = vtangent ? "True" : "False";
 
+            string[] allFiles = Directory.GetFiles(".", "*.*", SearchOption.AllDirectories);
+
             for (int q = 0; q < 3; q++)
             {
                 int mode = q;
@@ -69,8 +71,6 @@ namespace MakeMGCB
 #---------------------------------- Content ---------------------------------#
 
 ";
-
-                string[] allFiles = Directory.GetFiles(".", "*.*", SearchOption.AllDirectories);
 
                 foreach (string file in allFiles)
                 {
