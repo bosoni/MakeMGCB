@@ -1,5 +1,5 @@
 MakeMGCB
-(c) mjt, 2019
+(c) mjt, 2019-2025
 Released under MIT-license.
 
 Program creates .mgcb files.

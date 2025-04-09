@@ -1,6 +1,6 @@
 /*
 make .mgcb 
-(c) mjt 2019
+(c) mjt 2019-2025
 
 */
 using System;
@@ -16,10 +16,16 @@ namespace MakeMGCB
 
         static void Main(string[] args)
         {
-            Console.WriteLine("make .mgcb (c) mjt, 2019");
+            Console.WriteLine("make .mgcb (c) mjt, 2019-2025");
             Console.WriteLine("Creates Content.mgcb, Content_fbx.mgcb and Content_fx.mgcb files.");
-            Console.WriteLine("Parameters:\n -compress\n -compresstex  compress textures\n -mipmap  generate mipmaps\n -tangent  generate tangents\n");
-            foreach(string s in args)
+            Console.WriteLine(@"Parameters:
+ -compress       (Brotli compression)
+ -compresstex    compress textures
+ -mipmap         generate mipmaps
+ -tangent        generate tangents
+ ");
+
+            foreach (string s in args)
             {
                 if (s.Contains("-compresstex")) vcompressTextures = true;
                 else if (s.Contains("-compress")) vcompress = true;
@@ -27,14 +33,10 @@ namespace MakeMGCB
                 else if (s.Contains("-tangent")) vtangent = true;
             }
 
-            string compress = "False";
-            string compressTextures = "Color";
-            string generateMipmaps = "False";
-            string tangent = "False";
-            if (vcompress) compress = "True";
-            if (vcompressTextures) compressTextures = "Compressed";
-            if (vgenerateMipmaps) generateMipmaps = "True";
-            if (vtangent) tangent = "True";
+            string compress = vcompress ? "True\n/compression:Brotli" : "False";
+            string compressTextures = vcompressTextures ? "Compressed\n/compression:Brotli" : "Color";
+            string generateMipmaps = vgenerateMipmaps ? "True" : "False";
+            string tangent = vtangent ? "True" : "False";
 
             for (int q = 0; q < 3; q++)
             {
@@ -61,8 +63,8 @@ namespace MakeMGCB
 
 #-------------------------------- References --------------------------------#
 
-/reference:../Lib/MGSkinnedAnimationPipeline.dll
-/reference:../Lib/MGSkinnedAnimationAux.dll
+/reference:../Lib/SkinnedAnimationPipeline.dll
+/reference:../Lib/SkinnedAnimationAux.dll
 
 #---------------------------------- Content ---------------------------------#
 

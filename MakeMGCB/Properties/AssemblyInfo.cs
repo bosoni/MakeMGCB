@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("MakeMGCB")]
-[assembly: AssemblyCopyright("Copyright © mjt 2019")]
+[assembly: AssemblyCopyright("Copyright © mjt 2019-2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
