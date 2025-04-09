@@ -20,5 +20,11 @@ Content_fbx.mgcb contains only models.
 
 Assets under music/  will use Song processor.
 
-Under scripts/ directory, there are windows and linux scripts which compiles differend assets using monogame pipeline tools.
+
+.mgcb works with MG and KNI Pipeline tool.
+
+
+---
+Under scripts/ directory, there are windows and linux scripts (maybe out of date)
 Edit them as you will.
+---
